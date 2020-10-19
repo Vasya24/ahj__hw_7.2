@@ -6,24 +6,37 @@
     <title>AHJ__HW_7</title>
 </head>
 <body>
-    <button type="button" id="add_ticket">Добавить тикет</button>
-    <div id="tickets_wrapper">
-        <div class="ticket">
-            <input type="checkbox" class="done_ticket">
-            <span class="ticket_description">Я тут для примера, не обращайте на меня внимания</span>
-            <div class="edit_ticket">✎</div>
-            <div class="delete_ticket">X</div>
+    <div class='container'>
+        <div class='header'>
+          <div class='header-button'>Добавить тикет</div>
         </div>
-    </div>
-
-    <div class="modal">
-        <h5 class="modal_header">Добавить тикет</h5>
-        <form name="modal_form">
-        <label for="short_description">Краткое описание</label>
-        <input name="short_description" type="text" class="short_description_input">
-        <label for="full_description">Подробное описание</label>
-        <input name="full_description" type="text" class="full_description_input">
-    </form>
-    </div>
-</body>
+        <table class='tickets'>
+          <tbody id='tickets_list' class='tickets-list'>
+          </tbody>
+        </table>
+        <form name='edit' class='edit' novalidate>
+          <div class='form-header'>Добавить тикет</div>
+          <div class='ticket-name-form'>
+            <p>Краткое описание</p>
+            <input type='text' id='input_name' class='edit-input' required>
+          </div>
+          <div class='ticket-description-form'>
+            <p>Подробное описание</p>
+            <textarea id='input_description' class='edit-input' required></textarea>
+          </div>
+          <div class='buttons-box'>
+            <button type='button' id='cancel_button' class='button cancel-button'>Отмена</button>
+            <button type='submit' id='save_button' class='button submit-button'> Ok</button>
+          </div>
+        </form>
+        <form name='modal' class='modal' novalidate>
+          <div class='modal-header'>Удалить тикет</div>
+          <span class='modal-content'>Вы уверены, что нужно удалить тикет? Это действие необратимо.</span>
+          <div class='buttons-box'>
+            <button type='button' id='cancel_modal_button' class='button cancel-button'>Отмена</button>
+            <button type='submit' id='save_modal_button' class='button submit-button'> Ok</button>
+          </div>
+        </form>
+      </div>
+    </body>
 </html>
