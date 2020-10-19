@@ -103,9 +103,9 @@ td {
   cursor: pointer;
 }
 
-/* .done {
+.done {
   background-image: url('../img/checkmark.png');
-} */
+}
 
 .ticked-description {
   margin-top: 15px;
@@ -119,13 +119,13 @@ td {
   text-align: right;
 }
 
-/* .edit-button {
+.edit-button {
   background-image: url('../img/edit.png');
-} */
+}
 
-/* .delete-button {
+.delete-button {
   background-image: url('../img/delete.png');
-} */
+}
 
 .edit, .modal {
   display: none;
